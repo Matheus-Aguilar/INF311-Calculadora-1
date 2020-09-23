@@ -10,6 +10,7 @@
         android:id="@+id/valor1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:layout_marginTop="10dp"
         android:ems="10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,6 +22,7 @@
         android:id="@+id/valor2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:layout_marginTop="10dp"
         android:ems="10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,28 +41,28 @@
             android:text="+"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/valor2" />
+            android:onClick="clickButtonSum"/>
 
         <Button
             android:id="@+id/buttonSub"
             android:text="-"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/valor2" />
+            android:onClick="clickButtonSub"/>
 
         <Button
             android:id="@+id/buttonMult"
             android:text="*"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:onClick="clickButtonMult"/>
 
         <Button
             android:id="@+id/buttonDiv"
             android:text="/"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:onClick="clickButtonDiv"/>
     </LinearLayout>
 
     <TextView
@@ -82,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/valor1" />
 
     <TextView
-        android:id="@+id/resultado"
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="131dp"
